@@ -1,0 +1,442 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Product Completeness Tracker — Odoo 19</title>
+</head>
+<body>
+
+<!-- ============================================================
+     SECTION 1 — BRAND HEADER
+     ============================================================ -->
+<section class="sh_counter_section position-relative" style="margin-top:20px; margin-bottom:15px; padding:50px 0 0 0">
+  <div class="container">
+    <div style="width:100%; background-color:#f0f9ff; padding:30px; border-radius:35px">
+
+      <!-- Logo + title row -->
+      <div class="row align-items-center mb-4">
+        <div class="col-lg-8 col-md-8 d-flex align-items-center gap-3">
+          <img src="icon.png" alt="Product Completeness Tracker Icon" style="width:72px; height:72px; border-radius:16px; box-shadow:0 4px 16px rgba(99,102,241,.25)">
+          <div>
+            <div style="font-size:26px; font-weight:800; color:#1e293b; letter-spacing:-.02em">Product Completeness Tracker</div>
+            <div style="font-size:14px; color:#6366f1; font-weight:600; margin-top:2px">by Randy Nguyen</div>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-4 d-none d-md-flex justify-content-end align-items-center gap-2">
+          <span style="background:#6366f1; color:#fff; padding:6px 16px; border-radius:20px; font-size:13px; font-weight:700">✓ Community</span>
+          <span style="background:#8b5cf6; color:#fff; padding:6px 16px; border-radius:20px; font-size:13px; font-weight:700">✓ Enterprise</span>
+        </div>
+      </div>
+
+      <!-- KPI counter cards -->
+      <div class="row mt-2">
+        <div class="col-xxl-3 col-xl-3 col-lg-6 col-md-6 col-sm-12 col-12 card-group">
+          <div class="w-100 shadow" style="padding:24px 20px; border-radius:12px; background-color:#fff; margin:10px 0">
+            <div class="d-flex align-items-center justify-content-between">
+              <div>
+                <div style="font-size:14px; color:#64748b; font-weight:600; margin-bottom:4px">Fields Tracked</div>
+                <div style="font-size:28px; font-weight:800; color:#6366f1">5</div>
+              </div>
+              <div style="width:52px; height:52px; border-radius:50%; background:#eef2ff; display:flex; align-items:center; justify-content:center; font-size:24px">📊</div>
+            </div>
+          </div>
+        </div>
+        <div class="col-xxl-3 col-xl-3 col-lg-6 col-md-6 col-sm-12 col-12 card-group">
+          <div class="w-100 shadow" style="padding:24px 20px; border-radius:12px; background-color:#fff; margin:10px 0">
+            <div class="d-flex align-items-center justify-content-between">
+              <div>
+                <div style="font-size:14px; color:#64748b; font-weight:600; margin-bottom:4px">Odoo Version</div>
+                <div style="font-size:28px; font-weight:800; color:#6366f1">19.0</div>
+              </div>
+              <div style="width:52px; height:52px; border-radius:50%; background:#eef2ff; display:flex; align-items:center; justify-content:center; font-size:24px">⚡</div>
+            </div>
+          </div>
+        </div>
+        <div class="col-xxl-3 col-xl-3 col-lg-6 col-md-6 col-sm-12 col-12 card-group">
+          <div class="w-100 shadow" style="padding:24px 20px; border-radius:12px; background-color:#fff; margin:10px 0">
+            <div class="d-flex align-items-center justify-content-between">
+              <div>
+                <div style="font-size:14px; color:#64748b; font-weight:600; margin-bottom:4px">License</div>
+                <div style="font-size:28px; font-weight:800; color:#6366f1">LGPL-3</div>
+              </div>
+              <div style="width:52px; height:52px; border-radius:50%; background:#eef2ff; display:flex; align-items:center; justify-content:center; font-size:24px">🔓</div>
+            </div>
+          </div>
+        </div>
+        <div class="col-xxl-3 col-xl-3 col-lg-6 col-md-6 col-sm-12 col-12 card-group">
+          <div class="w-100 shadow" style="padding:24px 20px; border-radius:12px; background-color:#fff; margin:10px 0">
+            <div class="d-flex align-items-center justify-content-between">
+              <div>
+                <div style="font-size:14px; color:#64748b; font-weight:600; margin-bottom:4px">Dependencies</div>
+                <div style="font-size:28px; font-weight:800; color:#6366f1">product</div>
+              </div>
+              <div style="width:52px; height:52px; border-radius:50%; background:#eef2ff; display:flex; align-items:center; justify-content:center; font-size:24px">📦</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- CTA + badges row -->
+      <div class="row justify-content-between align-items-center mt-2">
+        <div class="col-lg-6">
+          <a href="mailto:dang.nguyennhu@lovepopvn.com" style="text-decoration:none">
+            <div style="background:#6366f1; color:#fff; padding:12px 24px; border-radius:50px; display:inline-flex; align-items:center; gap:10px; font-size:15px; font-weight:700">
+              <span class="fa fa-envelope"></span>
+              Contact / Support &nbsp;·&nbsp; dang.nguyennhu@lovepopvn.com
+            </div>
+          </a>
+        </div>
+        <div class="col-lg-6 d-none d-lg-flex justify-content-end gap-2 align-items-center">
+          <span style="border:1px solid #6366f1; color:#6366f1; padding:6px 16px; border-radius:8px; font-size:13px; font-weight:600">No Configuration Needed</span>
+          <span style="border:1px solid #6366f1; color:#6366f1; padding:6px 16px; border-radius:8px; font-size:13px; font-weight:600">OWL 2 Widget</span>
+          <span style="border:1px solid #6366f1; color:#6366f1; padding:6px 16px; border-radius:8px; font-size:13px; font-weight:600">Free Forever</span>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- ============================================================
+     SECTION 2 — MODULE DESCRIPTION
+     ============================================================ -->
+<section style="padding:60px 0 20px 0">
+  <div class="container">
+    <div class="text-center">
+      <h4 style="font-size:31px; font-weight:700; color:#1e293b; margin-bottom:10px">Product Completeness Tracker</h4>
+      <div style="display:block; height:3px; width:80px; background:linear-gradient(90deg,#6366f1,#8b5cf6); margin:16px auto 32px auto; border-radius:4px"></div>
+      <p style="color:#475569; font-size:18px; max-width:700px; margin:0 auto; line-height:1.7">
+        Stop flying blind on product data quality. A lightweight OWL 2 widget that adds a
+        <strong>color-coded progress bar</strong> (green / yellow / red) to every row in the product list,
+        an <strong>Incomplete Products</strong> filter, and a <strong>Missing Fields</strong> column
+        that tells you exactly what still needs to be filled in — all with zero configuration.
+      </p>
+    </div>
+  </div>
+</section>
+
+
+<!-- ============================================================
+     SECTION 2b — PAIN POINTS & SOLUTION
+     ============================================================ -->
+<section style="padding:20px 0 50px 0; background-color:transparent">
+  <div class="container">
+
+    <div class="row g-4">
+
+      <!-- Pain Points -->
+      <div class="col-md-6">
+        <div style="background:#fff5f5; border:1.5px solid #fecaca; border-radius:16px; padding:32px; height:100%">
+          <div style="font-size:22px; font-weight:800; color:#dc2626; margin-bottom:20px; display:flex; align-items:center; gap:10px">
+            <span style="font-size:28px">😓</span> The Problem
+          </div>
+          <ul style="list-style:none; padding:0; margin:0">
+            <li style="display:flex; gap:12px; margin-bottom:16px; align-items:flex-start">
+              <span style="color:#ef4444; font-size:18px; flex-shrink:0; margin-top:1px">✗</span>
+              <span style="color:#374151; font-size:15px; line-height:1.6">Hundreds of products missing images, descriptions, or prices — no quick way to see which ones need attention.</span>
+            </li>
+            <li style="display:flex; gap:12px; margin-bottom:16px; align-items:flex-start">
+              <span style="color:#ef4444; font-size:18px; flex-shrink:0; margin-top:1px">✗</span>
+              <span style="color:#374151; font-size:15px; line-height:1.6">Opening each product one-by-one to audit data quality wastes hours every week.</span>
+            </li>
+            <li style="display:flex; gap:12px; margin-bottom:16px; align-items:flex-start">
+              <span style="color:#ef4444; font-size:18px; flex-shrink:0; margin-top:1px">✗</span>
+              <span style="color:#374151; font-size:15px; line-height:1.6">No built-in way to filter "products that need work" — you can't prioritize what to fix first.</span>
+            </li>
+            <li style="display:flex; gap:12px; align-items:flex-start">
+              <span style="color:#ef4444; font-size:18px; flex-shrink:0; margin-top:1px">✗</span>
+              <span style="color:#374151; font-size:15px; line-height:1.6">Product launches get delayed because missing data issues are only discovered late — after catalogues or webshop go live.</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Solution -->
+      <div class="col-md-6">
+        <div style="background:#f0fdf4; border:1.5px solid #86efac; border-radius:16px; padding:32px; height:100%">
+          <div style="font-size:22px; font-weight:800; color:#16a34a; margin-bottom:20px; display:flex; align-items:center; gap:10px">
+            <span style="font-size:28px">🎯</span> The Solution
+          </div>
+          <ul style="list-style:none; padding:0; margin:0">
+            <li style="display:flex; gap:12px; margin-bottom:16px; align-items:flex-start">
+              <span style="color:#22c55e; font-size:18px; flex-shrink:0; margin-top:1px">✓</span>
+              <span style="color:#374151; font-size:15px; line-height:1.6">Color-coded progress bar inline on the product list — <strong style="color:#22c55e">green</strong> ≥80%, <strong style="color:#f59e0b">yellow</strong> ≥50%, <strong style="color:#ef4444">red</strong> &lt;50%.</span>
+            </li>
+            <li style="display:flex; gap:12px; margin-bottom:16px; align-items:flex-start">
+              <span style="color:#22c55e; font-size:18px; flex-shrink:0; margin-top:1px">✓</span>
+              <span style="color:#374151; font-size:15px; line-height:1.6">"Missing Fields" column shows <em>exactly</em> which fields still need data — no guesswork, no clicking into every product.</span>
+            </li>
+            <li style="display:flex; gap:12px; margin-bottom:16px; align-items:flex-start">
+              <span style="color:#22c55e; font-size:18px; flex-shrink:0; margin-top:1px">✓</span>
+              <span style="color:#374151; font-size:15px; line-height:1.6">"Incomplete Products" filter — one click to see only the products that still need work.</span>
+            </li>
+            <li style="display:flex; gap:12px; align-items:flex-start">
+              <span style="color:#22c55e; font-size:18px; flex-shrink:0; margin-top:1px">✓</span>
+              <span style="color:#374151; font-size:15px; line-height:1.6">Completeness score is stored and recomputed automatically whenever a product is saved — always up to date.</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- ============================================================
+     SECTION 2c — DEMO GIF
+     ============================================================ -->
+<section style="padding:10px 0 40px 0; background-color:transparent">
+  <div class="container">
+    <div class="col-md-12">
+      <img class="img-responsive rounded" style="width:100%; border:2px solid #6366f1; border-radius:14px; box-shadow:0 8px 32px rgba(99,102,241,.18)" src="banner.gif" alt="Product Completeness Tracker Demo">
+    </div>
+  </div>
+</section>
+
+
+<!-- ============================================================
+     SECTION 3 — FEATURES
+     ============================================================ -->
+<section style="padding:50px 0; background-color:transparent">
+  <div class="container">
+    <div class="text-center mb-5">
+      <h4 style="font-size:28px; font-weight:700; color:#1e293b; margin-bottom:10px">Key Features</h4>
+      <div style="display:block; height:3px; width:60px; background:linear-gradient(90deg,#6366f1,#8b5cf6); margin:12px auto 0 auto; border-radius:4px"></div>
+    </div>
+    <div class="row g-3">
+
+      <div class="col-md-6">
+        <div class="p-4 shadow rounded h-100 d-flex align-items-center" style="border:1px solid #6366f1; border-radius:12px !important">
+          <div style="border:1px solid #6366f1; padding:10px; border-radius:8px; margin-right:20px; display:flex; min-width:60px; min-height:60px; align-items:center; justify-content:center; background:#eef2ff">
+            <span style="font-size:28px">📊</span>
+          </div>
+          <span style="font-size:16px; color:#1e293b; font-weight:600; letter-spacing:.5px">Color-coded progress bar — green ≥80%, yellow ≥50%, red &lt;50% — visible at a glance in the product list.</span>
+        </div>
+      </div>
+
+      <div class="col-md-6">
+        <div class="p-4 shadow rounded h-100 d-flex align-items-center" style="border:1px solid #6366f1; border-radius:12px !important">
+          <div style="border:1px solid #6366f1; padding:10px; border-radius:8px; margin-right:20px; display:flex; min-width:60px; min-height:60px; align-items:center; justify-content:center; background:#eef2ff">
+            <span style="font-size:28px">🔍</span>
+          </div>
+          <span style="font-size:16px; color:#1e293b; font-weight:600; letter-spacing:.5px">"Missing Fields" column — lists exactly which fields need data (Image, Description, Price, Category).</span>
+        </div>
+      </div>
+
+      <div class="col-md-6">
+        <div class="p-4 shadow rounded h-100 d-flex align-items-center" style="border:1px solid #6366f1; border-radius:12px !important">
+          <div style="border:1px solid #6366f1; padding:10px; border-radius:8px; margin-right:20px; display:flex; min-width:60px; min-height:60px; align-items:center; justify-content:center; background:#eef2ff">
+            <span style="font-size:28px">⚡</span>
+          </div>
+          <span style="font-size:16px; color:#1e293b; font-weight:600; letter-spacing:.5px">"Incomplete Products" filter — one click to see only products that still need attention.</span>
+        </div>
+      </div>
+
+      <div class="col-md-6">
+        <div class="p-4 shadow rounded h-100 d-flex align-items-center" style="border:1px solid #6366f1; border-radius:12px !important">
+          <div style="border:1px solid #6366f1; padding:10px; border-radius:8px; margin-right:20px; display:flex; min-width:60px; min-height:60px; align-items:center; justify-content:center; background:#eef2ff">
+            <span style="font-size:28px">🔄</span>
+          </div>
+          <span style="font-size:16px; color:#1e293b; font-weight:600; letter-spacing:.5px">Stored computed fields — completeness score recomputes automatically on save, sortable &amp; filterable.</span>
+        </div>
+      </div>
+
+      <div class="col-md-6">
+        <div class="p-4 shadow rounded h-100 d-flex align-items-center" style="border:1px solid #6366f1; border-radius:12px !important">
+          <div style="border:1px solid #6366f1; padding:10px; border-radius:8px; margin-right:20px; display:flex; min-width:60px; min-height:60px; align-items:center; justify-content:center; background:#eef2ff">
+            <span style="font-size:28px">🎛️</span>
+          </div>
+          <span style="font-size:16px; color:#1e293b; font-weight:600; letter-spacing:.5px">Optional columns — Completeness and Missing Fields can be toggled on/off per user preference.</span>
+        </div>
+      </div>
+
+      <div class="col-md-6">
+        <div class="p-4 shadow rounded h-100 d-flex align-items-center" style="border:1px solid #6366f1; border-radius:12px !important">
+          <div style="border:1px solid #6366f1; padding:10px; border-radius:8px; margin-right:20px; display:flex; min-width:60px; min-height:60px; align-items:center; justify-content:center; background:#eef2ff">
+            <span style="font-size:28px">🔓</span>
+          </div>
+          <span style="font-size:16px; color:#1e293b; font-weight:600; letter-spacing:.5px">100% Free · LGPL-3 — only requires the standard <code>product</code> module. No paid tiers.</span>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- ============================================================
+     SECTION 4 — SCREENSHOTS & SETUP GUIDE
+     ============================================================ -->
+<section style="padding:50px 0; background-color:transparent">
+  <div class="container">
+    <div class="text-center mb-5">
+      <h4 style="font-size:28px; font-weight:700; color:#1e293b; margin-bottom:10px">Setup Guide</h4>
+      <div style="display:block; height:3px; width:60px; background:linear-gradient(90deg,#6366f1,#8b5cf6); margin:12px auto 0 auto; border-radius:4px"></div>
+    </div>
+
+    <p style="color:#1e293b; font-size:18px; margin-bottom:20px; font-weight:600">
+      1) Place the <strong>product_completeness_tracker</strong> folder in your Odoo custom addons directory and restart the server.
+    </p>
+
+    <p style="color:#1e293b; font-size:18px; margin-bottom:20px; font-weight:600">
+      2) Enable Developer Mode — go to <strong>Settings → Activate Developer Mode</strong>, then click <strong>Apps → Update Apps List</strong>.
+    </p>
+
+    <p style="color:#1e293b; font-size:18px; margin-bottom:20px; font-weight:600">
+      3) Search for <strong>"Product Completeness"</strong> in Apps and click <strong>Install</strong>.
+    </p>
+
+    <p style="color:#1e293b; font-size:18px; margin-bottom:16px; font-weight:600">
+      4) Open any product list (Inventory → Products, Sales → Products, etc.) — you'll see the <strong>Completeness</strong> and <strong>Missing Fields</strong> columns immediately.
+    </p>
+    <div class="col-md-12">
+      <img class="img-responsive rounded" style="width:100%; border:1px solid #6366f1; border-radius:12px" src="screenshots/01-product-list-with-completeness.png" alt="Product List with Completeness Bars">
+    </div>
+    <p style="color:#64748b; font-size:14px; text-align:center; margin:10px 0 32px 0; font-style:italic">Product list view — color-coded progress bars and missing fields column visible at a glance</p>
+
+    <p style="color:#1e293b; font-size:18px; margin-bottom:16px; font-weight:600">
+      5) Click the search dropdown and select <strong>Incomplete Products</strong> under Filters to instantly find products that need attention.
+    </p>
+    <div class="col-md-12">
+      <img class="img-responsive rounded" style="width:100%; border:1px solid #6366f1; border-radius:12px" src="screenshots/02-incomplete-filter-dropdown.png" alt="Incomplete Products Filter">
+    </div>
+    <p style="color:#64748b; font-size:14px; text-align:center; margin:10px 0 32px 0; font-style:italic">The "Incomplete Products" filter appears under Filters in the search bar dropdown</p>
+
+    <p style="color:#1e293b; font-size:18px; margin-bottom:16px; font-weight:600">
+      6) The filtered list shows only incomplete products — sorted by priority, with exact missing field names listed for each row.
+    </p>
+    <div class="col-md-12">
+      <img class="img-responsive rounded" style="width:100%; border:1px solid #6366f1; border-radius:12px" src="screenshots/03-filtered-incomplete-products.png" alt="Filtered Incomplete Products">
+    </div>
+    <p style="color:#64748b; font-size:14px; text-align:center; margin:10px 0 32px 0; font-style:italic">Filtered view — 4 of 5 products need data; each row shows exactly which fields are missing</p>
+
+  </div>
+</section>
+
+
+<!-- ============================================================
+     SECTION 5 — FAQ
+     ============================================================ -->
+<section style="padding:50px 0; background-color:transparent">
+  <div class="container">
+    <div class="text-center mb-5">
+      <h4 style="font-size:28px; font-weight:700; color:#1e293b; margin-bottom:10px">Frequently Asked Questions</h4>
+      <div style="display:block; height:3px; width:60px; background:linear-gradient(90deg,#6366f1,#8b5cf6); margin:12px auto 0 auto; border-radius:4px"></div>
+    </div>
+
+    <div class="row">
+      <div class="col-md-12">
+        <div class="accordion" id="accordion_faq">
+
+          <div style="margin:1rem 0">
+            <div class="card-header" data-bs-toggle="collapse" data-bs-target="#faq1" style="background-color:#f8f8f8; border:none; border-radius:10px 10px 0 0; padding:14px 24px; cursor:pointer">
+              <a class="card-title text-decoration-none" style="font-size:17px; font-weight:600; color:#1e293b">Which fields are checked for completeness?</a>
+            </div>
+            <div id="faq1" class="accordion-collapse collapse show" data-bs-parent="#accordion_faq" style="border:1px solid #f8f8f8; border-radius:0 0 10px 10px">
+              <p style="padding:14px 24px; font-size:15px; color:#64748b; line-height:1.65; margin:0">
+                Five fields are tracked, each worth 20%: <strong>Product Name</strong>, <strong>Sales Description</strong>,
+                <strong>Category</strong>, <strong>Product Image</strong>, and <strong>Sale Price</strong> (must be &gt; 0).
+                A product reaches 100% when all five fields are filled.
+              </p>
+            </div>
+          </div>
+
+          <div style="margin:1rem 0">
+            <div class="card-header collapsed" data-bs-toggle="collapse" data-bs-target="#faq2" style="background-color:#f8f8f8; border:none; border-radius:10px 10px 0 0; padding:14px 24px; cursor:pointer">
+              <a class="card-title text-decoration-none" style="font-size:17px; font-weight:600; color:#1e293b">When does the completeness score update?</a>
+            </div>
+            <div id="faq2" class="accordion-collapse collapse" data-bs-parent="#accordion_faq" style="border:1px solid #f8f8f8; border-radius:0 0 10px 10px">
+              <p style="padding:14px 24px; font-size:15px; color:#64748b; line-height:1.65; margin:0">
+                The score is a stored computed field. It automatically recomputes whenever any of the five tracked fields changes
+                on a product (via Odoo's <code>@api.depends</code> mechanism). No manual refresh needed.
+              </p>
+            </div>
+          </div>
+
+          <div style="margin:1rem 0">
+            <div class="card-header collapsed" data-bs-toggle="collapse" data-bs-target="#faq3" style="background-color:#f8f8f8; border:none; border-radius:10px 10px 0 0; padding:14px 24px; cursor:pointer">
+              <a class="card-title text-decoration-none" style="font-size:17px; font-weight:600; color:#1e293b">Does this work in Inventory, Sales, and Purchase menus?</a>
+            </div>
+            <div id="faq3" class="accordion-collapse collapse" data-bs-parent="#accordion_faq" style="border:1px solid #f8f8f8; border-radius:0 0 10px 10px">
+              <p style="padding:14px 24px; font-size:15px; color:#64748b; line-height:1.65; margin:0">
+                Yes. The module extends <strong>product.template</strong>'s standard list view, so the Completeness column and filter
+                appear in any menu that uses that list — Inventory → Products, Sales → Products, Purchase → Products, etc.
+              </p>
+            </div>
+          </div>
+
+          <div style="margin:1rem 0">
+            <div class="card-header collapsed" data-bs-toggle="collapse" data-bs-target="#faq4" style="background-color:#f8f8f8; border:none; border-radius:10px 10px 0 0; padding:14px 24px; cursor:pointer">
+              <a class="card-title text-decoration-none" style="font-size:17px; font-weight:600; color:#1e293b">Does installing this module change my existing product data?</a>
+            </div>
+            <div id="faq4" class="accordion-collapse collapse" data-bs-parent="#accordion_faq" style="border:1px solid #f8f8f8; border-radius:0 0 10px 10px">
+              <p style="padding:14px 24px; font-size:15px; color:#64748b; line-height:1.65; margin:0">
+                No. The module only <strong>adds</strong> two computed columns (<code>pct_completeness</code> and <code>pct_missing_fields</code>)
+                to <code>product.template</code>. It does not modify or delete any existing data. Uninstalling removes these columns cleanly.
+              </p>
+            </div>
+          </div>
+
+          <div style="margin:1rem 0">
+            <div class="card-header collapsed" data-bs-toggle="collapse" data-bs-target="#faq5" style="background-color:#f8f8f8; border:none; border-radius:10px 10px 0 0; padding:14px 24px; cursor:pointer">
+              <a class="card-title text-decoration-none" style="font-size:17px; font-weight:600; color:#1e293b">Can I hide the Completeness column if I don't need it?</a>
+            </div>
+            <div id="faq5" class="accordion-collapse collapse" data-bs-parent="#accordion_faq" style="border:1px solid #f8f8f8; border-radius:0 0 10px 10px">
+              <p style="padding:14px 24px; font-size:15px; color:#64748b; line-height:1.65; margin:0">
+                Yes. Both the <strong>Completeness</strong> and <strong>Missing Fields</strong> columns are marked as
+                <code>optional="show"</code>. Click the column settings icon (⊞) at the top right of the list to toggle them on or off per session.
+              </p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ============================================================
+     SECTION 6 — SUPPORT
+     ============================================================ -->
+<section style="padding:40px 0 60px 0; background-color:transparent">
+  <div class="container">
+    <div class="text-center mb-5">
+      <h4 style="font-size:28px; font-weight:700; color:#1e293b; margin-bottom:10px">Support</h4>
+      <div style="display:block; height:3px; width:60px; background:linear-gradient(90deg,#6366f1,#8b5cf6); margin:12px auto 0 auto; border-radius:4px"></div>
+    </div>
+    <div class="row">
+      <div class="col-md-8 mx-auto">
+        <ul style="padding:0; list-style:none">
+          <li class="border rounded" style="padding:24px; margin-bottom:16px; border-color:#6366f1 !important; border-radius:12px">
+            <a href="mailto:dang.nguyennhu@lovepopvn.com" style="text-decoration:none; color:#1e293b; font-size:17px; font-weight:600; display:flex; align-items:center; gap:12px">
+              <span class="fa fa-envelope" style="color:#6366f1; font-size:22px"></span>
+              Email support: <strong style="color:#6366f1">dang.nguyennhu@lovepopvn.com</strong>
+            </a>
+          </li>
+          <li class="border rounded" style="padding:24px; margin-bottom:16px; border-color:#6366f1 !important; border-radius:12px">
+            <div style="font-size:16px; color:#475569; line-height:1.65">
+              <strong style="color:#1e293b">Response time:</strong> We aim to respond within 1–2 business days.
+              Please include your Odoo version and a description of the issue.
+            </div>
+          </li>
+          <li class="border rounded" style="padding:24px; border-color:#6366f1 !important; border-radius:12px">
+            <div style="font-size:16px; color:#475569; line-height:1.65">
+              <strong style="color:#1e293b">Source code:</strong> LGPL-3 — free to use, modify, and redistribute.
+              Available on GitHub:
+              <a href="https://github.com/RandyNguyenN/product_completeness_tracker" style="color:#6366f1; font-weight:600">
+                github.com/RandyNguyenN/product_completeness_tracker
+              </a>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+</body>
+</html>

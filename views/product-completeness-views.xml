@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+
+    <!-- Inject completeness columns into the product template list view -->
+    <record id="view_product_template_completeness_list" model="ir.ui.view">
+        <field name="name">product.template.completeness.list</field>
+        <field name="model">product.template</field>
+        <field name="inherit_id" ref="product.product_template_tree_view"/>
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='name']" position="after">
+                <field name="pct_completeness"
+                       widget="completeness_progress"
+                       string="Completeness"
+                       optional="show"
+                       nolabel="0"/>
+                <field name="pct_missing_fields"
+                       string="Missing Fields"
+                       optional="show"/>
+            </xpath>
+        </field>
+    </record>
+
+    <!-- Add "Incomplete Products" filter to the product search view -->
+    <record id="view_product_template_completeness_search" model="ir.ui.view">
+        <field name="name">product.template.completeness.search</field>
+        <field name="model">product.template</field>
+        <field name="inherit_id" ref="product.product_template_search_view"/>
+        <field name="arch" type="xml">
+            <xpath expr="//search" position="inside">
+                <separator/>
+                <filter string="Incomplete Products"
+                        name="incomplete_products"
+                        domain="[('pct_completeness', '&lt;', 100)]"/>
+            </xpath>
+        </field>
+    </record>
+
+</odoo>

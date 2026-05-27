@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<templates xml:space="preserve">
+
+<t t-name="product_completeness_tracker.CompletenessProgress">
+    <div class="o_pct_wrapper">
+        <div class="o_pct_bar_track">
+            <div class="o_pct_bar_fill"
+                 t-att-style="'width:' + score.toFixed(0) + '%;background:' + barColor"/>
+        </div>
+        <span class="o_pct_label" t-att-style="'color:' + barColor"
+              t-esc="score.toFixed(0) + '%'"/>
+    </div>
+</t>
+
+</templates>

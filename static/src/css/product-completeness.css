@@ -1,0 +1,31 @@
+/* Product Completeness Tracker — progress bar widget */
+
+.o_pct_wrapper {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    min-width: 130px;
+}
+
+.o_pct_bar_track {
+    flex: 1;
+    height: 8px;
+    background: #e2e8f0;
+    border-radius: 4px;
+    overflow: hidden;
+}
+
+.o_pct_bar_fill {
+    height: 100%;
+    border-radius: 4px;
+    transition: width 0.3s ease;
+    min-width: 4px;
+}
+
+.o_pct_label {
+    font-size: 11px;
+    font-weight: 700;
+    min-width: 32px;
+    text-align: right;
+    white-space: nowrap;
+}
