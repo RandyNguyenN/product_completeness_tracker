@@ -1,10 +1,10 @@
 {
     'name': 'Product Completeness Tracker',
-    'version': '19.0.1.0.0',
+    'version': '18.0.1.0.0',
     'category': 'Inventory/Products',
     'summary': 'Progress bar on product list showing data completeness — highlights missing image, description, price, and category.',
     'description': """
-Product Completeness Tracker for Odoo 19 (Free / LGPL-3)
+Product Completeness Tracker for Odoo 18 (Free / LGPL-3)
 =========================================================
 - Color-coded progress bar (green/yellow/red) directly in the product list
 - "Incomplete Products" filter to instantly find products missing key data
