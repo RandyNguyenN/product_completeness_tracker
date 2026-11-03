@@ -12,8 +12,9 @@ Product Completeness Tracker for Odoo 17 (Free / LGPL-3)
 - Tracks: Product Name, Sales Description, Sale Price, Image, Category
 - Zero configuration — install and go
     """,
-    'author': 'Randy Nguyen',
-    'website': '',
+    'author': 'SunMesa Labs',
+    'website': 'https://odoo.sunmesalabs.com',
+    'support': 'randy@sunmesalabs.com',
     'license': 'LGPL-3',
     'depends': ['product', 'web'],
     'data': [
